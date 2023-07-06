@@ -1,0 +1,836 @@
+fileFormatVersion: 2
+guid: f672158b2f5af4d4f829ee50c068f252
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Anim_Evgena-export-export_0
+  - first:
+      213: 21300002
+    second: Anim_Evgena-export-export_1
+  - first:
+      213: 21300004
+    second: Anim_Evgena-export-export_2
+  - first:
+      213: 21300006
+    second: Anim_Evgena-export-export_3
+  - first:
+      213: 21300008
+    second: Anim_Evgena-export-export_4
+  - first:
+      213: 21300010
+    second: Anim_Evgena-export-export_5
+  - first:
+      213: 21300012
+    second: Anim_Evgena-export-export_6
+  - first:
+      213: 21300014
+    second: Anim_Evgena-export-export_7
+  - first:
+      213: 21300016
+    second: Anim_Evgena-export-export_8
+  - first:
+      213: 21300018
+    second: Anim_Evgena-export-export_9
+  - first:
+      213: 21300020
+    second: Anim_Evgena-export-export_10
+  - first:
+      213: 21300022
+    second: Anim_Evgena-export-export_11
+  - first:
+      213: 21300024
+    second: Anim_Evgena-export-export_12
+  - first:
+      213: 21300026
+    second: Anim_Evgena-export-export_13
+  - first:
+      213: 21300028
+    second: Anim_Evgena-export-export_14
+  - first:
+      213: 21300030
+    second: Anim_Evgena-export-export_15
+  - first:
+      213: 21300032
+    second: Anim_Evgena-export-export_16
+  - first:
+      213: 21300034
+    second: Anim_Evgena-export-export_17
+  - first:
+      213: 21300036
+    second: Anim_Evgena-export-export_18
+  - first:
+      213: 21300038
+    second: Anim_Evgena-export-export_19
+  - first:
+      213: 21300040
+    second: Anim_Evgena-export-export_20
+  - first:
+      213: 21300042
+    second: Anim_Evgena-export-export_21
+  - first:
+      213: 21300044
+    second: Anim_Evgena-export-export_22
+  - first:
+      213: 21300046
+    second: Anim_Evgena-export-export_23
+  - first:
+      213: 21300048
+    second: Anim_Evgena-export-export_24
+  - first:
+      213: 21300050
+    second: Anim_Evgena-export-export_25
+  - first:
+      213: 21300052
+    second: Anim_Evgena-export-export_26
+  - first:
+      213: 21300054
+    second: Anim_Evgena-export-export_27
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 640
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0247a349ad7107a4cbaff5109ea8e90e
+      internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 640
+        width: 80
+        height: 140
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91b3f0563c939414fab7f1b0c6a4ab46
+      internalID: 21300002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 480
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e47079c8d87e14bae14567b699b43d
+      internalID: 21300004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 480
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206b8e78cb9c83d4d84eafa91d3b778a
+      internalID: 21300006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_4
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2491d07111e8034e8193f378c4290b7
+      internalID: 21300008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_5
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e647fff2f930cb548850d6b366787083
+      internalID: 21300010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_6
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfb1c4e4ada9304995624d50e63fae6
+      internalID: 21300012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_7
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bae8f93bcdd5e54fb15c4f00c9d383f
+      internalID: 21300014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3125132b96e52c41a7f684e09229e78
+      internalID: 21300016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_9
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a06af5407d208943acbc1370f4ce7d2
+      internalID: 21300018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_10
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30706783da53f4b4283ffa45ce38860d
+      internalID: 21300020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_11
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 320
+        width: 80
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c0846db4193ff448e1647ac301de4e
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_12
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 160
+        width: 110
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631063d1d2e1ea34eade72d815da44da
+      internalID: 21300024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_13
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 160
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019ac29455f822f4d9616b8b5ee81b4d
+      internalID: 21300026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 100
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2e4f95b0d6a2d438fb89cde0fe30c8
+      internalID: 21300028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_15
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 160
+        width: 110
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7c31cc34abeb548adda1028a05ed27
+      internalID: 21300030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_16
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 160
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf1e1d8958ac5549a61183b3f7267fe
+      internalID: 21300032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_17
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 160
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d3120346e45ce4da217471448b2f55
+      internalID: 21300034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_18
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 160
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cb47d98abf20ff4db4ad03f143989dc
+      internalID: 21300036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_19
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 160
+        width: 100
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb6304e1c8a3a04e9d9b54459ad0612
+      internalID: 21300038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8815a7c550bbb74184decb30ab9bb62
+      internalID: 21300040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6edefedc554bc41aaaf04a46b3c565
+      internalID: 21300042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3795a2018b4274044b988386749ad1ef
+      internalID: 21300044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_23
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc6769ff4f406f40bc54bc761f616e3
+      internalID: 21300046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_24
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b6668e52c0b7434bb3b110f06099a48
+      internalID: 21300048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_25
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d08ea3134d6754c9199ccaab656a46
+      internalID: 21300050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_26
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0d2ceb8aaa27447856ada42bbcf07e
+      internalID: 21300052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anim_Evgena-export-export_27
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 0
+        width: 90
+        height: 140
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d59f101a33d6894ab426a2c48734dd8
+      internalID: 21300054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: eca7d6e706fa8864c828a643fc77b751
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Anim_Evgena-export-export_16: 21300032
+      Anim_Evgena-export-export_27: 21300054
+      Anim_Evgena-export-export_19: 21300038
+      Anim_Evgena-export-export_24: 21300048
+      Anim_Evgena-export-export_2: 21300004
+      Anim_Evgena-export-export_9: 21300018
+      Anim_Evgena-export-export_13: 21300026
+      Anim_Evgena-export-export_5: 21300010
+      Anim_Evgena-export-export_7: 21300014
+      Anim_Evgena-export-export_23: 21300046
+      Anim_Evgena-export-export_4: 21300008
+      Anim_Evgena-export-export_8: 21300016
+      Anim_Evgena-export-export_18: 21300036
+      Anim_Evgena-export-export_12: 21300024
+      Anim_Evgena-export-export_3: 21300006
+      Anim_Evgena-export-export_11: 21300022
+      Anim_Evgena-export-export_15: 21300030
+      Anim_Evgena-export-export_21: 21300042
+      Anim_Evgena-export-export_17: 21300034
+      Anim_Evgena-export-export_26: 21300052
+      Anim_Evgena-export-export_6: 21300012
+      Anim_Evgena-export-export_0: 21300000
+      Anim_Evgena-export-export_1: 21300002
+      Anim_Evgena-export-export_10: 21300020
+      Anim_Evgena-export-export_20: 21300040
+      Anim_Evgena-export-export_25: 21300050
+      Anim_Evgena-export-export_22: 21300044
+      Anim_Evgena-export-export_14: 21300028
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

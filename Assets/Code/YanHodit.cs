@@ -9,9 +9,10 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private Animator anim; // аниматор = аним
 	[SerializeField] private float speed;// открытая переменная скорость
 	private bool facingRight = true; // лицо вправо = правда
+	private bool gun;
+	private bool shot;
 	private Rigidbody2D rb; //  рб = компонент риджет бади
 	private Vector2 moveVector; //б приватная переменная вектор 2д moveVector 
-	private bool run;// бул бег
 	private bool isobject; // бул есть объект
 	public Transform CheckPos;// объект проверка позиции
 	public float CheckRadius;// публичная переменная проверочный радиус 
@@ -27,12 +28,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
     }
 	private void FixedUpdate()// постоянный покадровый цикл
 	{
-		
-		
-		
-		
-			
-			moveVector.x = Input.GetAxis("Horizontal");// движение по горизонтали на клавиатуре = движ по x
+		moveVector.x = Input.GetAxis("Horizontal");// движение по горизонтали на клавиатуре = движ по x
 		
 		
 		if(isobject == false)
@@ -48,73 +44,51 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			else if(facingRight == true && moveVector.x < 0)
 			{
 				Flip();
-				
 			}
-			if(run == false )
-			{
-				rb.velocity = new Vector2(moveVector.x * speed, moveVector.y * speed);
-			}
-			if(run == false)
-		{
-		
-			if(moveVector.x == 0f && moveVector.y == 0f)
+			
+			if(moveVector.x == 0f && moveVector.y == 0f && gun == false && shot == false)
 			{
 				anim.StopPlayback();
-				anim.Play("IDLE"); 
+				anim.Play("banyapokoy"); 
+			}
+
+			if(moveVector.x == 0f && moveVector.y == 0f && gun == true  && shot == false)
+			{
+				anim.StopPlayback();
+				anim.Play("banyapokoygun"); 
 			}
 			if(moveVector.x > 0f || moveVector.x < 0f || moveVector.y > 0f || moveVector.y < 0f) 
 			{
 			
 				anim.StopPlayback();
-				anim.Play("Walk");
+				anim.Play("banyago");
 			}
-		}
-		 else if(run == false)
-		{
+			rb.velocity = new Vector2(moveVector.x * speed, moveVector.y * speed);
 			
-			rb.velocity = new Vector2(moveVector.x * speed * 0.6f, moveVector.y * speed * 0.6f);
-		
-		if(moveVector.x == 0f && moveVector.y == 0f )
-		{
-			
-			anim.StopPlayback();
-			anim.Play("IDLEPris"); 
-		}
-		if(moveVector.x > 0f || moveVector.x < 0f || moveVector.y > 0f || moveVector.y < 0f) 
-		{
-			
-			anim.StopPlayback();
-			anim.Play("WalkPris");
-		}
-		}
 	}
-    /*IEnumerator Quit()
+    IEnumerator Shoot()
 	{
-		//yield return  new WaitForSeconds(1.6f);
-		//SceneManager.LoadScene(2);
-	}*/
+		shot = true;
+		anim.StopPlayback(); // всем анимациям "остановитясь"
+		anim.Play("banyagunshot"); // сыграть анимацию выстрела
+		yield return new WaitForSeconds(0.9f);
+		shot = false;
+		gun = false;
+	}
 	void Update()
     {
 		
 		isobject = Physics2D.OverlapCircle(CheckPos.position,CheckRadius,whatIsTable);
-		if(run == true && (moveVector.x > 0f || moveVector.x < 0f || moveVector.y > 0f || moveVector.y < 0f) )
-		{
-			anim.StopPlayback();
-			anim.Play("Run");
-			rb.velocity = new Vector2(moveVector.x * speed * 1.6f, moveVector.y * speed * 1.6f);
-		}
-		else if(moveVector.x == 0f && moveVector.y == 0f)
+		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.F) && shot == false) // стрельба
 			{
-				rb.velocity = new Vector2(moveVector.x, moveVector.y);
-				anim.StopPlayback();
-				anim.Play("IDLE"); 
+				StartCoroutine(Shoot());
 			}
-		
-		if(Input.GetKey(KeyCode.LeftShift))
-		{
-			run = true;
-		}
-		else {run = false;}
+		if(gun == false && Input.GetKeyDown(KeyCode.F) && shot == false) // достать оружие
+			{
+				gun = true; // доступ к пушке
+			}	
+			
+	
     }
 	void Flip()
 	{
