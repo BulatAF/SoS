@@ -83,7 +83,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			{
 				StartCoroutine(Shoot());
 			}
-		if(gun == false && Input.GetKeyDown(KeyCode.F) && shot == false) // достать оружие
+		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false) // достать оружие
 			{
 				gun = true; // доступ к пушке
 			}	
