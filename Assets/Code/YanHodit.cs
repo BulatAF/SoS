@@ -8,9 +8,11 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 {
 	private Animator anim; // аниматор = аним
 	[SerializeField] private float speed;// открытая переменная скорость
+	[SerializeField] private GameObject Canvas;	
 	private bool facingRight = true; // лицо вправо = правда
-	private bool gun;
-	private bool shot;
+	private bool gun; // значение ружья
+	private bool shot = true; // значение стрельбы
+	private bool reload; // значение перезарядки
 	private Rigidbody2D rb; //  рб = компонент риджет бади
 	private Vector2 moveVector; //б приватная переменная вектор 2д moveVector 
 	private bool isobject; // бул есть объект
@@ -21,7 +23,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	
      void Start()// начало программы
     {
-		
+		Canvas.SetActive(true);
 		anim = GetComponent<Animator>();// амин = аниматор
 		rb = GetComponent<Rigidbody2D>();// рб = риджет бади
 		
@@ -36,35 +38,38 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			moveVector.y = Input.GetAxis("Vertical");
 		}
 		else{moveVector.y = 0f;}
-		if(facingRight == false && moveVector.x > 0 )
-			{
-				Flip();
-				
-			}
-			else if(facingRight == true && moveVector.x < 0)
+		if(facingRight == false && moveVector.x > 0 && shot == false)
 			{
 				Flip();
 			}
-			
+			else if(facingRight == true && moveVector.x < 0 && shot == false)
+			{
+				Flip();
+			}
 			if(moveVector.x == 0f && moveVector.y == 0f && gun == false && shot == false)
 			{
 				anim.StopPlayback();
 				anim.Play("banyapokoy"); 
 			}
-
 			if(moveVector.x == 0f && moveVector.y == 0f && gun == true  && shot == false)
 			{
 				anim.StopPlayback();
 				anim.Play("banyapokoygun"); 
 			}
-			if(moveVector.x > 0f || moveVector.x < 0f || moveVector.y > 0f || moveVector.y < 0f) 
-			{
-			
+			if((moveVector.x > 0f || moveVector.x < 0f || moveVector.y > 0f || moveVector.y < 0f) && shot == false) 
+			{ 
 				anim.StopPlayback();
 				anim.Play("banyago");
 			}
-			rb.velocity = new Vector2(moveVector.x * speed, moveVector.y * speed);
+			if(shot == false)
+			{
+				rb.velocity = new Vector2(moveVector.x * speed, moveVector.y * speed);	
+			}
+				
 			
+			
+		
+		
 	}
     IEnumerator Shoot()
 	{
@@ -74,6 +79,19 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		yield return new WaitForSeconds(0.9f);
 		shot = false;
 		gun = false;
+		
+	}
+
+    IEnumerator reload()
+	{
+		shot = true;
+		reload == true;
+		anim.StopPlayback(); // всем анимациям "остановитясь"
+		anim.Play("relouding"); // сыграть анимацию перезарядки
+		yield return new WaitForSeconds(19.42f);
+		shot = false;
+		gun = false;
+		reload == false;
 	}
 	void Update()
     {
@@ -83,11 +101,17 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			{
 				StartCoroutine(Shoot());
 			}
-		if(gun == false && Input.GetKeyDown(KeyCode.F) && shot == false) // достать оружие
+		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false) // достать оружие
 			{
 				gun = true; // доступ к пушке
 			}	
 			
+		
+		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.R) && shot == false && reload == false) // перезарядка
+			{
+				StartCoroutine(reload());
+			}
+		
 	
     }
 	void Flip()
@@ -100,6 +124,22 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			transform.localScale = Scaler;
 		}
 	}
+	public void Delete()
+	{
+		Canvas.SetActive(false);
+		shot = false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
 
