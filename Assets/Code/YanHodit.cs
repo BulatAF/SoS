@@ -12,7 +12,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private bool facingRight = true; // лицо вправо = правда
 	private bool gun; // значение ружья
 	private bool shot = true; // значение стрельбы
-	private bool reload; // значение перезарядки
+	private bool reload = true; // значение перезарядки
 	private Rigidbody2D rb; //  рб = компонент риджет бади
 	private Vector2 moveVector; //б приватная переменная вектор 2д moveVector 
 	private bool isobject; // бул есть объект
@@ -20,6 +20,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	public float CheckRadius;// публичная переменная проверочный радиус 
 	public LayerMask whatIsTable;// слой что есть стол, печь
 	public LayerMask whatIsHome;// слой что есть дом
+	private string name = "atackst";
 	
      void Start()// начало программы
     {
@@ -79,38 +80,115 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		yield return new WaitForSeconds(0.9f);
 		shot = false;
 		gun = false;
-		
+		reload = false;
 	}
 
-    IEnumerator reload()
+    IEnumerator Reload()
 	{
 		shot = true;
-		reload == true;
+		reload = true;
 		anim.StopPlayback(); // всем анимациям "остановитясь"
 		anim.Play("relouding"); // сыграть анимацию перезарядки
 		yield return new WaitForSeconds(19.42f);
 		shot = false;
-		gun = false;
-		reload == false;
+		gun = true;	
 	}
+	IEnumerator Atackst()
+	{
+		shot = true;
+		if(facingRight == false)
+		{
+			rb.velocity = new Vector2(-1.5f * speed, moveVector.y);
+			anim.StopPlayback(); // всем анимациям "остановитясь"
+			anim.Play(name); // сыграть анимацию перезарядки
+			yield return new WaitForSeconds(0.42f);
+			rb.velocity = new Vector2(1.5f * speed, moveVector.y);
+			yield return new WaitForSeconds(0.42f);
+		}
+		else
+		{
+			rb.velocity = new Vector2(1.5f * speed, moveVector.y);
+			anim.StopPlayback(); // всем анимациям "остановитясь"
+			anim.Play(name); // сыграть анимацию перезарядки
+			yield return new WaitForSeconds(0.42f);
+			rb.velocity = new Vector2(-1.5f * speed, moveVector.y);
+			yield return new WaitForSeconds(0.42f);
+		}
+		shot = false;
+		gun = false;
+	}
+	IEnumerator Blockst()
+	{
+		shot = true;
+		if(facingRight == false)
+		{
+			rb.velocity = new Vector2(0f,0f);
+			anim.StopPlayback(); // всем анимациям "остановитясь"
+			anim.Play(name); // сыграть анимацию перезарядки
+			yield return new WaitForSeconds(0.42f);
+		}
+		else
+		{
+			rb.velocity = new Vector2(0f,0f);
+			anim.StopPlayback(); // всем анимациям "остановитясь"
+			anim.Play(name); // сыграть анимацию перезарядки
+			yield return new WaitForSeconds(0.42f);
+		}
+		shot = false;
+		gun = false;
+	}
+	
+	
+	
+	
 	void Update()
     {
 		
 		isobject = Physics2D.OverlapCircle(CheckPos.position,CheckRadius,whatIsTable);
-		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.F) && shot == false) // стрельба
+		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // стрельба
 			{
 				StartCoroutine(Shoot());
 			}
-		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false) // достать оружие
+		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // достать оружие
 			{
 				gun = true; // доступ к пушке
 			}	
-			
-		
-		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.R) && shot == false && reload == false) // перезарядка
+		if(moveVector.x == 0f && moveVector.y == 0f && Input.GetKeyUp(KeyCode.R) && shot == false && reload == false) // перезарядка
 			{
-				StartCoroutine(reload());
+				StartCoroutine(Reload());
 			}
+		
+		
+		
+		
+		
+		
+		if(gun == false && Input.GetKeyUp(KeyCode.G) && shot == false) // удар классик 
+		{
+			name = "atackst";
+			StartCoroutine(Atackst());
+		}
+		if(gun == false && Input.GetKeyUp(KeyCode.H) && shot == false) // удар классик 
+		{
+			name = "atackup";
+			StartCoroutine(Atackst());
+		}
+		if(gun == false && Input.GetKeyUp(KeyCode.J) && shot == false) // удар классик 
+		{
+			name = "blockclas";
+			StartCoroutine(Blockst());
+		}
+		if(gun == false && Input.GetKeyUp(KeyCode.K) && shot == false) // удар классик 
+		{
+			name = "blockup";
+			StartCoroutine(Blockst());
+		}
+		
+		
+		
+		
+		
+		
 		
 	
     }
