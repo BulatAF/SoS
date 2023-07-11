@@ -9,9 +9,10 @@ public class Monolog : MonoBehaviour
 	string[] DTrue =  new[]{"Я задремал и мне приснился кошмар","Да, поел","Можно мне погулять?","Да"};
 	string[] DFalse =  new[]{"Я задремал и мне приснился кошмар","Да, поел","Можно мне погулять?","Да"};
 	public static int replWhat2;
-	[SerializeField] Text text2;
+	[SerializeField] private Text text2;
 	
 	private int whatDialog;
+	
 	void Start()
     {
         replWhat2 = 0;
