@@ -11,7 +11,7 @@ public class Monolog : MonoBehaviour
 	public static int replWhat2;
 	[SerializeField] Text text2;
 	
-	private int whatDialog;
+	public static int whatDialog2 = 1;
 	void Start()
     {
         replWhat2 = 0;
@@ -20,37 +20,38 @@ public class Monolog : MonoBehaviour
     
     void Update()
     {
-        if(whatDialog == 0)
+		
+        if(whatDialog2 == 1)
 		{
-			
+			text2.text = DStart[replWhat2];
 			if(Input.GetKeyDown(KeyCode.E))
 			{
 				replWhat2 += 1;
 			}
-			while (replWhat2 < 8)
-			{
-				text2.text = DStart[replWhat2];
-			}
+			
 			if(replWhat2 == 8)
 			{
 				replWhat2 = 0;
+				whatDialog2 =0;
 			}
 			
 		}
-		if(whatDialog == 1)
+		if(whatDialog2 == 2)
 		{
-			
-				//replWhat2 += 1;
-			
-			while (replWhat2 < 10)
+			if(Input.GetKeyDown(KeyCode.E))
 			{
-				text2.text = DFalse[replWhat2];
+				replWhat2 += 1;
 			}
+			
+			
+				text2.text = DFalse[replWhat2];
+			
 			if(replWhat2 == 10)
 			{
 				replWhat2 = 0;
+				whatDialog2 =0;
 			}
 			
-		}
+	}
     }
 }
