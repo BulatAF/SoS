@@ -9,6 +9,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private Animator anim; // аниматор = аним
 	[SerializeField] private float speed;// открытая переменная скорость
 	[SerializeField] private GameObject Canvas;	
+	[SerializeField] private GameObject Okno;	
 	private bool facingRight = true; // лицо вправо = правда
 	private bool gun; // значение ружья
 	private bool shot = true; // значение стрельбы
@@ -24,7 +25,8 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	
      void Start()// начало программы
     {
-		Canvas.SetActive(true);
+		Canvas.SetActive(false);
+		Okno.SetActive(true);
 		anim = GetComponent<Animator>();// амин = аниматор
 		rb = GetComponent<Rigidbody2D>();// рб = риджет бади
 		
@@ -32,8 +34,10 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private void FixedUpdate()// постоянный покадровый цикл
 	{
 		moveVector.x = Input.GetAxis("Horizontal");// движение по горизонтали на клавиатуре = движ по x
-		
-		
+		if(Monolog.whatDialog2 == 0 && shot == true)
+		{
+			Canvas.SetActive(true);
+		}
 		if(isobject == false)
 		{
 			moveVector.y = Input.GetAxis("Vertical");
@@ -204,6 +208,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	}
 	public void Delete()
 	{
+		Okno.SetActive(false);
 		Canvas.SetActive(false);
 		shot = false;
 	}
