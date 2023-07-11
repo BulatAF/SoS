@@ -167,34 +167,27 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		
 		
 		
-		if(gun == false && Input.GetKeyUp(KeyCode.G) && shot == false) // удар классик 
+		if(gun == false && Input.GetKeyUp(KeyCode.G) && shot == false) //
 		{
 			name = "atackst";
 			StartCoroutine(Atackst());
 		}
-		if(gun == false && Input.GetKeyUp(KeyCode.H) && shot == false) // удар классик 
+		if(gun == false && Input.GetKeyUp(KeyCode.H) && shot == false) //
 		{
 			name = "atackup";
 			StartCoroutine(Atackst());
 		}
-		if(gun == false && Input.GetKeyUp(KeyCode.J) && shot == false) // удар классик 
+		if(gun == false && Input.GetKeyUp(KeyCode.J) && shot == false)  //
 		{
 			name = "blockclas";
 			StartCoroutine(Blockst());
 		}
-		if(gun == false && Input.GetKeyUp(KeyCode.K) && shot == false) // удар классик 
+		if(gun == false && Input.GetKeyUp(KeyCode.K) && shot == false) // 
 		{
 			name = "blockup";
 			StartCoroutine(Blockst());
 		}
 		
-		
-		
-		
-		
-		
-		
-	
     }
 	void Flip()
 	{
@@ -212,18 +205,13 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		Canvas.SetActive(false);
 		shot = false;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Finish") 
+		{
+			target.TfalsE +=1;
+		}
+	}
 }
 
 
