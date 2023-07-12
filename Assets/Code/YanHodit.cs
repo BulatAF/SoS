@@ -13,6 +13,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private bool facingRight = true; // лицо вправо = правда
 	private bool gun; // значение ружья
 	private bool shot = true; // значение стрельбы
+	private bool strt = true;
 	private bool reload = true; // значение перезарядки
 	private Rigidbody2D rb; //  рб = компонент риджет бади
 	private Vector2 moveVector; //б приватная переменная вектор 2д moveVector 
@@ -34,7 +35,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private void FixedUpdate()// постоянный покадровый цикл
 	{
 		moveVector.x = Input.GetAxis("Horizontal");// движение по горизонтали на клавиатуре = движ по x
-		if(Monolog.whatDialog2 == 0 && shot == true)
+		if(Monolog.whatDialog2 == 0 && strt == true)
 		{
 			Canvas.SetActive(true);
 		}
@@ -187,6 +188,14 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			name = "blockup";
 			StartCoroutine(Blockst());
 		}
+		if(target.TfalsE >= 4)
+		{
+			rb.velocity = new Vector2(0f,0f);
+			shot = true;
+			anim.StopPlayback();
+			anim.Play("banyapokoy");
+			Monolog.whatDialog2 = 2;
+		}
 		
     }
 	void Flip()
@@ -203,6 +212,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	{
 		Okno.SetActive(false);
 		Canvas.SetActive(false);
+		strt = false;
 		shot = false;
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -211,7 +221,14 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		{
 			target.TfalsE +=1;
 		}
+		if(collision.gameObject.tag == "Respawn") 
+		{
+			target.TtruE +=1;
+		}
 	}
+	
+        
+	
 }
 
 

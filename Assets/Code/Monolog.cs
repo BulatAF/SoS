@@ -38,13 +38,7 @@ public class Monolog : MonoBehaviour
 		}
 		if(whatDialog2 == 2)
 		{
-			if(Input.GetKeyDown(KeyCode.E))
-			{
-				replWhat2 += 1;
-			}
-			
-			
-				text2.text = DFalse[replWhat2];
+			text2.text = DFalse[target.TfalsE];
 			
 			if(replWhat2 == 10)
 			{

@@ -17,13 +17,15 @@ public class target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if(TfalsE > 0)
+		
+		if(TfalsE > 0 && TfalsE < 4)
 		{
-			Tfalse[TfalsE-1].GetComponent<BoxCollider2D>().enabled = false;
+			Destroy(Tfalse[TfalsE-1].GetComponent<BoxCollider2D>());
+			
 		}
 		if(TtruE > 0)
 		{
-			Ttrue[TtruE-1].GetComponent<BoxCollider2D>().enabled = false;
+			Destroy(Ttrue[TtruE-1].GetComponent<BoxCollider2D>());
 		}
     }
 }
