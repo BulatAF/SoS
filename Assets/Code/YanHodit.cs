@@ -188,13 +188,12 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			name = "blockup";
 			StartCoroutine(Blockst());
 		}
-		if(target.TfalsE >= 4)
+		if(target.TfalsE >= 3)
 		{
 			rb.velocity = new Vector2(0f,0f);
 			shot = true;
 			anim.StopPlayback();
 			anim.Play("banyapokoy");
-			Monolog.whatDialog2 = 2;
 		}
 		
     }
@@ -220,6 +219,8 @@ public class YanHodit : MonoBehaviour // объявление скрипта
         if(collision.gameObject.tag == "Finish") 
 		{
 			target.TfalsE +=1;
+			Okno.SetActive(true);
+			Monolog.whatDialog2 = 2;
 		}
 		if(collision.gameObject.tag == "Respawn") 
 		{

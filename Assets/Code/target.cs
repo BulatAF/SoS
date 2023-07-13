@@ -18,7 +18,7 @@ public class target : MonoBehaviour
     void Update()
     {
 		
-		if(TfalsE > 0 && TfalsE < 4)
+		if(TfalsE > 0 && TfalsE < 3)
 		{
 			Destroy(Tfalse[TfalsE-1].GetComponent<BoxCollider2D>());
 			
