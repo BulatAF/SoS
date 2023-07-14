@@ -13,7 +13,8 @@ public class Monolog : MonoBehaviour
 	"Подобные виды искусных техник также будут использовать и ваши противники, так что не мешало бы вас обучить и тому, как от них отбиваться.",
 	"Эх, почему меня заставляют это делать? Хотелось бы понаблюдать, как ты будешь страдать...",
 	"Начнём. Для защиты от первой и второй вида вялых атак ваших противников, нажмите ✍︎ и ✍︎ соответственно.",
-	"Ну что, просто ведь?"};
+	"Ну что, просто ведь?",
+	"Для продолжения своих мучений продолжи движение вправо и ни в коем случе не в ЛЕВО"};
 	string[] DTrueDA =  new[]{"А теперь перейдём к огнеплюйке, он же мушкет.",
 	"Производить неточный одноразовый выстрел стоит ДВАЖДЫ НАЖАВ на копку ✍︎.",
 	"Волшебную клавишу перезарядки, пожалуй, я разглашать не буду - она же тебе не понадобится.",
@@ -30,14 +31,15 @@ public class Monolog : MonoBehaviour
 	"Ну вот, пошло дело. Ты, конечно, прости, но придётся ещё чирик секундов отсидеть.",
 	"Что ж, всё готово, но так как ты, тушка, провинилась, не послушав мой дикторский голос, то по моей хотелке отсидишь ещё 10 секунд. Хе-хе.",
 	"О, пошло-поехало. Спасибо за вашу усидчивость и покладистый нрав.","Ах, и да, пожалуйста, уважаемое членистоногое, оставьте хотя бы добрый и справедливый отзыв об игре."};
+	[SerializeField] private GameObject neprohod;
 	public static int replWhat2;
 	[SerializeField] Text text2;
 	private bool one;
-	
 	public static int whatDialog2 = 1;
 	void Start()
     {
         replWhat2 = 0;
+		neprohod.SetActive(false);
     }
 
     
@@ -51,13 +53,11 @@ public class Monolog : MonoBehaviour
 			{
 				replWhat2 += 1;
 			}
-			
 			if(replWhat2 == 8)
 			{
 				replWhat2 = 0;
 				whatDialog2 = 3;
 			}
-			
 		}
 		if(whatDialog2 == 2)
 		{
@@ -69,14 +69,14 @@ public class Monolog : MonoBehaviour
 			}
 		}
 		
-		if(target.TtruE == 1 && whatDialog2 == 3) // диалог вправо ближний бой
+		if(target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == 2)) // диалог вправо ближний бой
 		{
 			text2.text = DTrueBA[replWhat2];
 			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 3 && replWhat2 != 6)
 			{
 				replWhat2 += 1;
 			}
-			if(replWhat2 == 7)
+			if(replWhat2 == 9)
 			{
 				replWhat2 = 0;
 				whatDialog2 = 4;
@@ -93,7 +93,7 @@ public class Monolog : MonoBehaviour
 		if(whatDialog2 == 4 && target.TtruE == 2) // диалог вправо дальний бой
 		{
 			text2.text = DTrueDA[replWhat2];
-			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 1 )
+			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 1)
 			{
 				replWhat2 += 1;
 			}
@@ -116,6 +116,7 @@ public class Monolog : MonoBehaviour
 			}
 			if(replWhat2 == 4)
 			{
+				replWhat2 =0;
 				StartCoroutine(Exit());
 				IEnumerator Exit()
 				{
@@ -124,6 +125,10 @@ public class Monolog : MonoBehaviour
 					Application.Quit();    // закрыть приложение
 				}
 			}
+		}
+		if(target.TtruE !=0) 
+		{
+			neprohod.SetActive(true); 
 		}
 		
 		
