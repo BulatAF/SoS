@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Monolog : MonoBehaviour
 {
-	string[] DStart =  new[]{"Приветствую тебя, Туша.","Чтобы не возникало лишних вопросов скажу сразу - это обучение.... "," Возможно... ","Для того, чтобы пройти это возможно-невозможное типа обучение повернись вправо и передвигай ногами вперёд - это называется ходьба.","Для подобных мероприятий можешь попробовать потыкать комбинацию кнопок  Ц Ы В, ну или W S D. ","Кому как удобней. ","Первоочередно, давай научим тебя говорить, хотя, можно подумать тебя будет кто-то слушать. ","Ты уже оставил отзыв о данной игре?"};
+	string[] DStart =  new[]{"Приветствую тебя, Туша.(Нажми на E англ)","Чтобы не возникало лишних вопросов скажу сразу - это обучение.... "," Возможно... ","Для того, чтобы пройти это возможно-невозможное типа обучение повернись вправо и передвигай ногами вперёд - это называется ходьба.","Для подобных мероприятий можешь попробовать потыкать комбинацию кнопок  Ц Ы В, ну или W S D. ","Кому как удобней. ","Первоочередно, давай научим тебя говорить, хотя, можно подумать тебя будет кто-то слушать. ","Ты уже оставил отзыв о данной игре?"};
 	string[] DTrueBA =  new[]{"Что ж, выбор интересный, а главное правильный. Приступим к обучению.",
 	"Если ты обратил внимание на своего персонажа, то скорее всего заметил, что ты весьма вооружен.",
 	"К примеру у тебя есть такое оружие ближнего боя, как шпага.",
@@ -15,7 +15,7 @@ public class Monolog : MonoBehaviour
 	"Начнём. Для защиты от первой и второй вида вялых атак ваших противников, нажмите ✍︎ и ✍︎ соответственно.",
 	"Ну что, просто ведь?"};
 	string[] DTrueDA =  new[]{"А теперь перейдём к огнеплюйке, он же мушкет.",
-	"Производить неточный одноразовый выстрел стоит на копку ✍︎.",
+	"Производить неточный одноразовый выстрел стоит ДВАЖДЫ НАЖАВ на копку ✍︎.",
 	"Волшебную клавишу перезарядки, пожалуй, я разглашать не буду - она же тебе не понадобится.",
 	"Спросишь почему? Потому что потому. Чумба, это мушкет. Один выстрел и пошёл резать. Всё.",
 	"Но если хочешь, можешь поискать её, она точно есть. Но вряд ли она тебе пригодится."};
@@ -55,7 +55,7 @@ public class Monolog : MonoBehaviour
 			if(replWhat2 == 8)
 			{
 				replWhat2 = 0;
-				whatDialog2 = 0;
+				whatDialog2 = 3;
 			}
 			
 		}
@@ -69,25 +69,60 @@ public class Monolog : MonoBehaviour
 			}
 		}
 		
-		if(whatDialog2 == 3) // диалог вправо
+		if(target.TtruE == 1 && whatDialog2 == 3) // диалог вправо ближний бой
 		{
-			text2.text = DStart[replWhat2];
-			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 4 && replWhat2 != 7)
+			text2.text = DTrueBA[replWhat2];
+			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 3 && replWhat2 != 6)
 			{
 				replWhat2 += 1;
 			}
-			if(replWhat2 == 8)
+			if(replWhat2 == 7)
 			{
 				replWhat2 = 0;
-				whatDialog2 = 0;
+				whatDialog2 = 4;
 			}
-			if(replWhat2 == 4 && (Input.GetKeyDown(KeyCode.H) || (Input.GetKeyDown(KeyCode.G)))) 
+			if(replWhat2 == 3 && (Input.GetKeyDown(KeyCode.H) || (Input.GetKeyDown(KeyCode.G)))) 
 			{
 				replWhat2 += 1;
 			}
-			if(replWhat2 == 7 && (Input.GetKeyDown(KeyCode.J) || (Input.GetKeyDown(KeyCode.K)))) 
+			if(replWhat2 == 6 && (Input.GetKeyDown(KeyCode.J) || (Input.GetKeyDown(KeyCode.K)))) 
 			{
 				replWhat2 += 1;
+			}
+		}
+		if(whatDialog2 == 4 && target.TtruE == 2) // диалог вправо дальний бой
+		{
+			text2.text = DTrueDA[replWhat2];
+			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 1 )
+			{
+				replWhat2 += 1;
+			}
+			if(replWhat2 == 4)
+			{
+				replWhat2 = 0;
+				whatDialog2 = 5;
+			}
+			if(replWhat2 == 1 && Input.GetKeyDown(KeyCode.F)) 
+			{
+				replWhat2 += 1;
+			}
+		}
+		if(whatDialog2 == 5 && target.TtruE == 3) // диалог вправо итог
+		{
+			text2.text = DTrueEnd[replWhat2];
+			if(Input.GetKeyDown(KeyCode.E))
+			{
+				replWhat2 += 1;
+			}
+			if(replWhat2 == 4)
+			{
+				StartCoroutine(Exit());
+				IEnumerator Exit()
+				{
+					yield return new WaitForSeconds(3f);
+					Application.OpenURL("https://vk.com/notnevername");
+					Application.Quit();    // закрыть приложение
+				}
 			}
 		}
 		

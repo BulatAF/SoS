@@ -35,7 +35,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private void FixedUpdate()// постоянный покадровый цикл
 	{
 		moveVector.x = Input.GetAxis("Horizontal");// движение по горизонтали на клавиатуре = движ по x
-		if(Monolog.whatDialog2 == 0 && strt == true)
+		if(Monolog.whatDialog2 == 3 && strt == true)
 		{
 			Canvas.SetActive(true);
 		}
@@ -168,15 +168,21 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		
 		
 		
-		if(gun == false && Input.GetKeyUp(KeyCode.G) && shot == false) //
+		if(Input.GetKeyUp(KeyCode.G) && shot == false) //
 		{
-			name = "atackst";
-			StartCoroutine(Atackst());
+			if(gun == false)
+			{
+				name = "atackst";
+				StartCoroutine(Atackst());
+			}else{gun = false;}
 		}
 		if(gun == false && Input.GetKeyUp(KeyCode.H) && shot == false) //
 		{
-			name = "atackup";
-			StartCoroutine(Atackst());
+			if(gun == false)
+			{
+				name = "atackup";
+				StartCoroutine(Atackst());
+			}else{gun = false;}
 		}
 		if(gun == false && Input.GetKeyUp(KeyCode.J) && shot == false)  //
 		{
@@ -222,9 +228,11 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			Okno.SetActive(true);
 			Monolog.whatDialog2 = 2;
 		}
-		if(collision.gameObject.tag == "Respawn") 
+		if(collision.gameObject.tag == "Respawn" && Monolog.whatDialog2 - target.TtruE == 3) 
 		{
 			target.TtruE +=1;
+			Okno.SetActive(true);
+			//Monolog.whatDialog2 = target.TtruE + 2;
 		}
 	}
 	
