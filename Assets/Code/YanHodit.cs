@@ -226,9 +226,9 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		{
 			target.TfalsE +=1;
 			Okno.SetActive(true);
-			Monolog.whatDialog2 = 2;
+			Monolog.whatDialog2 = -1;
 		}
-		if(collision.gameObject.tag == "Respawn" && Monolog.whatDialog2 ==2) 
+		if(collision.gameObject.tag == "Respawn" && Monolog.whatDialog2 - target.TtruE != 2) 
 		{
 			
 			target.TtruE +=1;

@@ -59,7 +59,7 @@ public class Monolog : MonoBehaviour
 				whatDialog2 = 3;
 			}
 		}
-		if(whatDialog2 == 2)
+		if(whatDialog2 == -1)// диалог влево
 		{
 			text2.text = DFalse[target.TfalsE];
 			
@@ -69,8 +69,9 @@ public class Monolog : MonoBehaviour
 			}
 		}
 		
-		if(target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == 2)) // диалог вправо ближний бой
+		if(target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1)) // диалог вправо ближний бой
 		{
+			whatDialog2 =3;
 			text2.text = DTrueBA[replWhat2];
 			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 3 && replWhat2 != 6)
 			{
@@ -116,7 +117,7 @@ public class Monolog : MonoBehaviour
 			}
 			if(replWhat2 == 4)
 			{
-				replWhat2 =0;
+				replWhat2 =10;
 				StartCoroutine(Exit());
 				IEnumerator Exit()
 				{
