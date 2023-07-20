@@ -590,12 +590,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f7bf3a004b85b2a469eefdc8e91bfa00, type: 3}
   - {fileID: 8300000, guid: 3ce7c704c11e6de4d852062810c5bc2a, type: 3}
   ban2:
+  - {fileID: 0}
   - {fileID: 8300000, guid: f95ff90d6884b6f498d18a29dc565fbe, type: 3}
   - {fileID: 8300000, guid: a7acac2d4b3e4f64cb41b6e5f1f91bcf, type: 3}
   - {fileID: 8300000, guid: 826960d487c8b3d4ca5a7b95e748140d, type: 3}
   - {fileID: 8300000, guid: c42f0c264a83ba14eb0677550c817dd2, type: 3}
   - {fileID: 8300000, guid: 0aff1c2edb5e96d4fa8629a0db542a90, type: 3}
   - {fileID: 8300000, guid: 6bbbeff6f2d814b4fbdab79f48e0aa37, type: 3}
+  - {fileID: 8300000, guid: 90910096746424c4eab1811be494d64a, type: 3}
+  - {fileID: 8300000, guid: 1fa2e79502139db41a687dbdd2aa72b4, type: 3}
+  - {fileID: 8300000, guid: e14a045e776f7e44896117d50fb8c5e6, type: 3}
+  - {fileID: 8300000, guid: 193cd6dd66a33044cbb288231c57e859, type: 3}
+  - {fileID: 8300000, guid: 3fb1f335c38933a4699e4511a53965d9, type: 3}
   ban3:
   - {fileID: 8300000, guid: 1ecbea2fb78203d4996f9c6c4c576c73, type: 3}
   - {fileID: 8300000, guid: bf71534d134c24b478ec1765d80e0c3e, type: 3}
