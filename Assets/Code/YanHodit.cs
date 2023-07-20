@@ -23,6 +23,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	public LayerMask whatIsTable;// слой что есть стол, печь
 	public LayerMask whatIsHome;// слой что есть дом
 	private string name = "atackst";
+	public static int Gun;	
 	
      void Start()// начало программы
     {
@@ -85,7 +86,9 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		yield return new WaitForSeconds(0.9f);
 		shot = false;
 		gun = false;
-		reload = false;
+		reload = false; 
+		yield return new WaitForSeconds(1f);
+		Gun = 0;
 	}
 
     IEnumerator Reload()
@@ -152,6 +155,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		isobject = Physics2D.OverlapCircle(CheckPos.position,CheckRadius,whatIsTable);
 		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // стрельба
 			{
+				Gun = 1;
 				StartCoroutine(Shoot());
 			}
 		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // достать оружие
