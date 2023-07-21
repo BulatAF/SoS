@@ -11,8 +11,8 @@ public class ZvukBany : MonoBehaviour
 	[SerializeField] private AudioClip[] ban5;
 	private AudioSource aud;
 	private bool one;//чтобы один раз	
-	public  int repl;//чтобы записывать предыдущюю replwhat2
-	public int Repl2;
+	private  int repl;//чтобы записывать предыдущюю replwhat2
+	private int Repl2;
     void Start()
     {
 		aud = GetComponent<AudioSource>();
