@@ -14,7 +14,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private bool gun; // значение ружья
 	private bool shot = true; // значение стрельбы
 	private bool strt = true;
-	public bool reload = true; // значение перезарядки
+	public bool reload = false; // значение перезарядки
 	private Rigidbody2D rb; //  рб = компонент риджет бади
 	private Vector2 moveVector; //б приватная переменная вектор 2д moveVector 
 	private bool isobject; // бул есть объект
@@ -222,13 +222,11 @@ public class YanHodit : MonoBehaviour // объявление скрипта
     }
 	void Flip()
 	{
-		if(TimeLine.DialogDed != 1)
-		{
-			facingRight = !facingRight;
-			Vector3 Scaler = transform.localScale;
-			Scaler.x *= -1;
-			transform.localScale = Scaler;
-		}
+		facingRight = !facingRight;
+		Vector3 Scaler = transform.localScale;
+		Scaler.x *= -1;
+		transform.localScale = Scaler;
+		
 	}
 	public void Delete()
 	{
@@ -236,6 +234,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		Canvas.SetActive(false);
 		strt = false;
 		shot = false;
+		reload = true;
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
     {

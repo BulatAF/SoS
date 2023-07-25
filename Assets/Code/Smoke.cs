@@ -8,6 +8,7 @@ public class Smoke : MonoBehaviour
 	[SerializeField] private GameObject Pers;
 	[SerializeField] private GameObject smoke;
 	[SerializeField] private GameObject bullet;
+	[SerializeField] private GameObject SpawnBullet;
 	private float pilyus;
     void Start()
     {
@@ -17,7 +18,7 @@ public class Smoke : MonoBehaviour
 
     IEnumerator SmokeL()
 	{
-		Instantiate(bullet,transform.position, Quaternion.identity);
+		Instantiate(bullet,SpawnBullet.transform.position, Quaternion.identity);
 		yield return new WaitForSeconds(0.1f);
 		smoke.GetComponent<SpriteRenderer>().enabled = true;
 		transform.position = new Vector3(pilyus + Pers.transform.position.x, 0.135f + Pers.transform.position.y, 0f);
