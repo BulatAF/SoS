@@ -14,7 +14,6 @@ public class OzvuchkaNew : MonoBehaviour
 	[SerializeField] private AudioClip[] dialogMih;
 	private bool one;
 	private bool one5;
-	private bool oneShit;
 	private int replWhat;
     void Start()
     {
@@ -43,7 +42,6 @@ public class OzvuchkaNew : MonoBehaviour
 				StopCoroutine(Shit());
 				gameObject.GetComponent<AudioSource>().Stop();
 				one = false;
-				oneShit = false;
 				replWhat += 1;
 			}
 			switch(TextDialoUpdate.replWhat)
@@ -68,7 +66,6 @@ public class OzvuchkaNew : MonoBehaviour
 				StopCoroutine(Shit());
 				gameObject.GetComponent<AudioSource>().Stop();
 				one = false;
-				oneShit = false;
 				replWhat += 1;
 			}
 			switch(TextDialoUpdate.replWhat)
@@ -100,7 +97,6 @@ public class OzvuchkaNew : MonoBehaviour
 				StopCoroutine(Shit());
 				gameObject.GetComponent<AudioSource>().Stop();
 				one = false;
-				oneShit = false;
 				replWhat += 1;
 			}
 				switch(TextDialoUpdate.replWhat)
@@ -125,7 +121,7 @@ public class OzvuchkaNew : MonoBehaviour
 			}
 				switch(TextDialoUpdate.replWhat)
                 {
-					case 0: {gameObject.GetComponent<AudioSource>().clip = dialog1_1[0];replWhat += 1;if(one5 == false && replWhat == TextDialoUpdate.replWhat + 1){one5 = true;oneShit = false;StartCoroutine(Shit());}replWhat = 0;break;}
+					case 0: {gameObject.GetComponent<AudioSource>().clip = dialog1_1[0];replWhat += 1;if(one5 == false && replWhat == TextDialoUpdate.replWhat + 1){one5 = true;StartCoroutine(Shit());}replWhat = 0;break;}
 					//case 1:{replWhat = 0;break;}
 					default: break;}
 		}
@@ -135,13 +131,19 @@ public class OzvuchkaNew : MonoBehaviour
 			{
 				StopCoroutine(Shit());
 				one = false;
-				oneShit = false;
 				replWhat += 1;
 			}
-				switch(TextDialoUpdate.replWhat)
-                {
-					case 0: {gameObject.GetComponent<AudioSource>().clip = dialog1_2[0];if(one == false /*&& replWhat == TextDialoUpdate.replWhat*/){one = true;oneShit = false;StartCoroutine(Shit());StartCoroutine(Shit2());}break;replWhat = 0;}
-		default: break;}}
+			if(TextDialoUpdate.replWhat == 0)
+			{
+				gameObject.GetComponent<AudioSource>().clip = dialog1_2[0];
+				if(one == false)
+				{
+					one = true;StartCoroutine(Shit());
+					StartCoroutine(Shit2());
+				}
+				replWhat = 0;
+			}
+		}
 		IEnumerator Shit2()
 		{
 			
