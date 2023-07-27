@@ -11,7 +11,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	[SerializeField] private GameObject Canvas;	
 	[SerializeField] private GameObject Okno;	
 	private bool facingRight = true; // лицо вправо = правда
-	private bool gun; // значение ружья
+	private bool gun = true; // значение ружья
 	private bool shot = true; // значение стрельбы
 	private bool strt = true;
 	public bool reload = false; // значение перезарядки
@@ -235,6 +235,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		strt = false;
 		shot = false;
 		reload = true;
+		gun = false;
 	}
 	private void OnTriggerEnter2D(Collider2D collision)
     {

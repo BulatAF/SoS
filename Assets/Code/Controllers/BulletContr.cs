@@ -27,12 +27,19 @@ IEnumerator SmokeL()
 		rb.velocity = new Vector3(storon,-0.05f*storon,0f);
 		yield return new WaitForSeconds(2f);
 	}
+	IEnumerator Dira()
+	{
+		yield return new WaitForSeconds(Random.Range(0.00001f,0.00003f));
+		rb.velocity = new Vector3(0f,0f,0f);
+		
+	}
 	
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
 			if(collision.gameObject.tag == "Mishen") 
 			{
-				rb.velocity = new Vector3(0f,0f,0f);	
+				StopCoroutine(SmokeL());
+				StartCoroutine(Dira());
 				storon = 0f;
 				anim.Play("bulletStop");
 			}
