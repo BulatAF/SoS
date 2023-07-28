@@ -23,7 +23,9 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	public LayerMask whatIsTable;// слой что есть стол, печь
 	public LayerMask whatIsHome;// слой что есть дом
 	private string name = "atackst";
-	public static int Gun;	
+	public static int Gun;
+	public GameObject effect;
+	public GameObject effect1;
 	
      void Start()// начало программы
     {
@@ -89,6 +91,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		reload = false; 
 		yield return new WaitForSeconds(1f);
 		Gun = 0;
+		
 	}
 
     IEnumerator Reload()
@@ -156,6 +159,8 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // стрельба
 			{
 				Gun = 1;
+				Instantiate(effect, transform.position, Quaternion.identity); // строка срабатывания партиклов полки в анимации выстрела (неработает)
+				Instantiate(effect1, transform.position, transform.rotation); // строка срабатывания партиклов выстрела в анимации выстрела (неработает)
 				StartCoroutine(Shoot());
 			}
 		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // достать оружие

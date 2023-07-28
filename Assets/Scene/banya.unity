@@ -548,6 +548,8 @@ MonoBehaviour:
   whatIsHome:
     serializedVersion: 2
     m_Bits: 0
+  effect: {fileID: 1140416016}
+  effect1: {fileID: 698279832}
 --- !u!95 &259871241
 Animator:
   serializedVersion: 5
@@ -2097,7 +2099,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -2216,8 +2218,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 70
-      minScalar: 60
+      scalar: 100
+      minScalar: 80
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7752,7 +7754,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -12573,7 +12575,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1140416016}
   serializedVersion: 8
   lengthInSec: 0.05
-  simulationSpeed: 5
+  simulationSpeed: 4.5
   stopAction: 2
   cullingMode: 0
   ringBufferMode: 0
