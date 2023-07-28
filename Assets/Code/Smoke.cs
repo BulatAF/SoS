@@ -9,11 +9,13 @@ public class Smoke : MonoBehaviour
 	[SerializeField] private GameObject smoke;
 	[SerializeField] private GameObject bullet;
 	[SerializeField] private GameObject SpawnBullet;
+	[SerializeField] private Rigidbody2D rb;
 	private float pilyus;
     void Start()
     {
 		anim = GetComponent<Animator>();// амин = аниматор
         smoke.GetComponent<SpriteRenderer>().enabled = false;
+		rb = GetComponent<Rigidbody2D>();
     }
 
     IEnumerator SmokeL()
@@ -34,6 +36,7 @@ public class Smoke : MonoBehaviour
 			pilyus = 5.47f;
 			anim.SetBool("Shoot", true);
 			StartCoroutine(SmokeL());
+			rb.velocity = new Vector2(Wind.XWindd,Wind.YWindd);
 		}
 		if(YanHodit.Gun == 2)//смотрит влево
         {
@@ -41,6 +44,7 @@ public class Smoke : MonoBehaviour
 			pilyus = -5.47f;
 			anim.SetBool("Shoot", true);
 			StartCoroutine(SmokeL());
+			rb.velocity = new Vector2(Wind.XWindd,Wind.YWindd);		
 		}
     }
 }
