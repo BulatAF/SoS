@@ -29,7 +29,7 @@ public class BulletContr : MonoBehaviour
 		if(stopMove == false)
 		{
 
-			rb.velocity = new Vector3(storon * (Wind.XWindd * 0.1f),Wind.YWindd * 0.1f,0f);
+			rb.velocity = new Vector3(storon + (Wind.XWindd * 0.1f),Wind.YWindd * 0.1f,0f);
 		}
 		else{
 			rb.velocity = new Vector3(0f,0f,0f);

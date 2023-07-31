@@ -115,6 +115,10 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	IEnumerator Atackst()//атака ближняя
 	{
 		shot = true;
+		if(gun == false)
+		{
+			gun = true;
+		}
 		if(facingRight == false)
 		{
 			rb.velocity = new Vector2(-1.5f * speed, moveVector.y);

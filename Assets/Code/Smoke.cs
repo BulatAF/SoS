@@ -10,6 +10,8 @@ public class Smoke : MonoBehaviour
 	[SerializeField] private GameObject bullet;
 	[SerializeField] private GameObject SpawnBullet;
 	[SerializeField] private Rigidbody2D rb;
+	private float XPers;
+	private float YPers;
 	private float pilyus;
     void Start()
     {
@@ -23,7 +25,9 @@ public class Smoke : MonoBehaviour
 		Instantiate(bullet,SpawnBullet.transform.position, Quaternion.identity);
 		yield return new WaitForSeconds(0.1f);
 		smoke.GetComponent<SpriteRenderer>().enabled = true;
-		transform.position = new Vector3(pilyus + Pers.transform.position.x, 0.135f + Pers.transform.position.y, 0f);
+		XPers = Pers.transform.position.x;
+		YPers = Pers.transform.position.y;
+		transform.position = new Vector3(pilyus + XPers, 0.135f + YPers, 0f);
 		yield return new WaitForSeconds(1.8f);
 		smoke.GetComponent<SpriteRenderer>().enabled = false;
 		anim.SetBool("Shoot", false);

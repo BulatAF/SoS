@@ -5,19 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Video.unity
     guid: 8baf17bca81efab44b6d7a18b3b22a34
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Siege.unity
     guid: d88d306216b6e214496be8f21828dc1d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/ulitsa.unity
     guid: 5afa9f5c4dbd3f0489ec2e9ac6c498d4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Cherch.unity
     guid: 1d80dcdfe59318f4f93bcddcaec2c91c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/End.unity
     guid: 6d0a990a566f1394b919cf0d669e5a66
+  - enabled: 1
+    path: Assets/Scene/banya.unity
+    guid: 92b1ae20853ff234a8257f71b0a2d89c
   m_configObjects: {}
