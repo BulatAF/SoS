@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2022.2/release' branch; Version is '2022.2.3f1 (55531d7fa82e) revision 5591837'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19042) 64bit Professional' Language: 'ru' Physical Memory: 5886 MB
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 16366 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-G:\2022.2.3f1\Editor\Unity.exe
+D:\instun\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-D:/6Bulat/games/My project (1)
+D:/SoS/SoS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63614
-Successfully changed project path to: D:/6Bulat/games/My project (1)
-D:/6Bulat/games/My project (1)
+60975
+Successfully changed project path to: D:/SoS/SoS
+D:/SoS/SoS
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,61 +47,63 @@ D:/6Bulat/games/My project (1)
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [4976] Host "[IP] 192.168.42.147 [Port] 0 [Flags] 2 [Guid] 1700693368 [EditorId] 1700693368 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10292] Host "[IP] 192.168.0.12 [Port] 0 [Flags] 2 [Guid] 2901101178 [EditorId] 2901101178 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F0I4LLS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [4976] Host "[IP] 192.168.42.147 [Port] 0 [Flags] 2 [Guid] 1700693368 [EditorId] 1700693368 [Version] 1048832 [Id] WindowsEditor(7,HOME-PC) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10292] Host "[IP] 192.168.0.12 [Port] 0 [Flags] 2 [Guid] 2901101178 [EditorId] 2901101178 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-F0I4LLS) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 39.50 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 26.09 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.2.3f1 (55531d7fa82e)
-[Subsystems] Discovering subsystems at path G:/2022.2.3f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/6Bulat/games/My project (1)/Assets
+[Subsystems] Discovering subsystems at path D:/instun/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/SoS/SoS/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
-    Version:  Direct3D 11.0 [level 10.0]
-    Renderer: ATI Radeon 3000 Graphics (ID=0x9616)
-    Vendor:   ATI
-    VRAM:     252 MB
-    Driver:   8.970.100.9001
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 550 Ti (ID=0x1244)
+    Vendor:   NVIDIA
+    VRAM:     3010 MB
+    Driver:   23.21.13.9135
 Initialize mono
-Mono path[0] = 'G:/2022.2.3f1/Editor/Data/Managed'
-Mono path[1] = 'G:/2022.2.3f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'G:/2022.2.3f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56916
+Mono path[0] = 'D:/instun/Editor/Data/Managed'
+Mono path[1] = 'D:/instun/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/instun/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: G:/2022.2.3f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.007970 seconds.
-- Loaded All Assemblies, in  0.729 seconds
+Register platform support module: D:/instun/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: D:/instun/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.011509 seconds.
+- Loaded All Assemblies, in  0.856 seconds
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.551 seconds
+- Finished resetting the current domain, in  0.736 seconds
 Domain Reload Profiling:
-	ReloadAssembly (457ms)
-		BeginReloadAssembly (237ms)
+	ReloadAssembly (454ms)
+		BeginReloadAssembly (176ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
 		LoadAllAssembliesAndSetupDomain (0ms)
-			LoadAssemblies (234ms)
+			LoadAssemblies (175ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (266ms)
-				TypeCache.Initialize (264ms)
-					TypeCache.ScanAssembly (260ms)
+			SetupTypeCache (391ms)
+				TypeCache.Initialize (390ms)
+					TypeCache.ScanAssembly (386ms)
 				ResolveRequiredComponents (1ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (431ms)
+			SetupLoadedEditorAssemblies (589ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (16ms)
-				SetLoadedEditorAssemblies (17ms)
+				InitializePlatformSupportModulesInManaged (111ms)
+				SetLoadedEditorAssemblies (12ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (297ms)
-				ProcessInitializeOnLoadMethodAttributes (99ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (291ms)
+				ProcessInitializeOnLoadMethodAttributes (172ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -109,48 +111,49 @@ Domain Reload Profiling:
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.435 seconds
-Refreshing native plugins compatible for Editor in 6.10 ms, found 2 plugins.
+- Loaded All Assemblies, in  1.571 seconds
+Refreshing native plugins compatible for Editor in 13.69 ms, found 2 plugins.
 Native extension for WindowsStandalone target not found
+Native extension for Android target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.722 seconds
+- Finished resetting the current domain, in  1.487 seconds
 Domain Reload Profiling:
-	ReloadAssembly (433ms)
-		BeginReloadAssembly (251ms)
+	ReloadAssembly (504ms)
+		BeginReloadAssembly (274ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (12ms)
+			DisableScriptedObjects (14ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (45ms)
-		LoadAllAssembliesAndSetupDomain (1001ms)
-			LoadAssemblies (317ms)
+			CreateAndSetChildDomain (41ms)
+		LoadAllAssembliesAndSetupDomain (1065ms)
+			LoadAssemblies (210ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (803ms)
-				TypeCache.Initialize (436ms)
-					TypeCache.ScanAssembly (425ms)
-				ResolveRequiredComponents (7ms)
+			SetupTypeCache (988ms)
+				TypeCache.Initialize (602ms)
+					TypeCache.ScanAssembly (593ms)
+				ResolveRequiredComponents (12ms)
 		FinalizeReload (0ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (0ms)
-			SetupLoadedEditorAssemblies (1414ms)
+			SetupLoadedEditorAssemblies (1118ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
-				SetLoadedEditorAssemblies (16ms)
+				InitializePlatformSupportModulesInManaged (34ms)
+				SetLoadedEditorAssemblies (27ms)
 				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (112ms)
-				ProcessInitializeOnLoadAttributes (916ms)
-				ProcessInitializeOnLoadMethodAttributes (354ms)
-				AfterProcessingInitializeOnLoad (6ms)
+				BeforeProcessingInitializeOnLoad (129ms)
+				ProcessInitializeOnLoadAttributes (588ms)
+				ProcessInitializeOnLoadMethodAttributes (332ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 6.87 ms, found 2 plugins.
+			AwakeInstancesAfterBackupRestoration (14ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 14.19 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2539 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 52 unused Assets / (159.7 KB). Loaded Objects now: 2998.
-Memory consumption went from 404.9 MB to 404.8 MB.
-Total: 17.743100 ms (FindLiveObjects: 0.735400 ms CreateObjectMapping: 0.232400 ms MarkObjects: 16.289700 ms  DeleteObjects: 0.483000 ms)
+Unloading 2538 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 51 unused Assets / (144.6 KB). Loaded Objects now: 3001.
+Memory consumption went from 404.9 MB to 404.7 MB.
+Total: 15.124300 ms (FindLiveObjects: 0.497700 ms CreateObjectMapping: 0.225100 ms MarkObjects: 14.129200 ms  DeleteObjects: 0.270100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
@@ -165,137 +168,202 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 2503.538879 seconds.
-  path: Assets/Prefabs/bullet.prefab
-  artifactKey: Guid(1cd5f4fadf9d01443aaba92b008bcac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 587943.904152 seconds.
+  path: Assets/Sprits/yan/gun gun11.png
+  artifactKey: Guid(b4fca46d982ee5f4b9026c99dd294233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/Prefabs/bullet.prefab using Guid(1cd5f4fadf9d01443aaba92b008bcac8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31ee9e37b197f7893938ea8d70436dab') in 0.498659 seconds 
-Number of asset objects unloaded after import = 9
+Start importing Assets/Sprits/yan/gun gun11.png using Guid(b4fca46d982ee5f4b9026c99dd294233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b2ad574059f1ae011eae56c0bb653a3') in 0.323376 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 206.246240 seconds.
-  path: Assets/music/Ozvuchka/Ded/Бьегиии.m4a--online-audio-convert.com.mp3
-  artifactKey: Guid(0f0dbc3572c2c7e429ec66c45da0a5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprits/yan/gun gun33.png
+  artifactKey: Guid(64497e157c19fac4397e0bdf4340e2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Бьегиии.m4a--online-audio-convert.com.mp3 using Guid(0f0dbc3572c2c7e429ec66c45da0a5fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd04aef98a5463a868e7c3b0bdd6234c4') in 0.354555 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/Sprits/yan/gun gun33.png using Guid(64497e157c19fac4397e0bdf4340e2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e42ae28d774695ade6866712b81151') in 0.048385 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/music/Ozvuchka/Ded/Она_дешевле_покупай_m4a_online_audio_convert_com.mp3
-  artifactKey: Guid(2640ccd0768883340867918e4f59e82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprits/yan/gun gun55.png
+  artifactKey: Guid(8a5a6f2b621f83c47bf45d98863cf1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Она_дешевле_покупай_m4a_online_audio_convert_com.mp3 using Guid(2640ccd0768883340867918e4f59e82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8fc9b5c7752bd0cda8994f10807e622') in 0.048445 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/Sprits/yan/gun gun55.png using Guid(8a5a6f2b621f83c47bf45d98863cf1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '641d7b002ffee12a48e6417266cbdcb6') in 0.040245 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/music/Ozvuchka/Ded/Потому-что-хлеб2.mp3
-  artifactKey: Guid(f05a53e64f3bec4458619a302e32e414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprits/yan/gun gun22.png
+  artifactKey: Guid(ea00b879b9c8fe049aeb81b7399e5c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Потому-что-хлеб2.mp3 using Guid(f05a53e64f3bec4458619a302e32e414) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7b7a9dcbc40acc3055a01f20a437f39') in 0.022172 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/music/Ozvuchka/Ded/Потому-что-хлеб2 1.mp3
-  artifactKey: Guid(3643974ac3741ff4db5bb431cf3dff64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Потому-что-хлеб2 1.mp3 using Guid(3643974ac3741ff4db5bb431cf3dff64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '219a07b1e87886373ada11aab20fb295') in 0.011110 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/music/Ozvuchka/Ded/Она_дешевле_покупай_m4a_online_audio_convert_com 1.mp3
-  artifactKey: Guid(63617a44f3c53f14b9283e120662abeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Она_дешевле_покупай_m4a_online_audio_convert_com 1.mp3 using Guid(63617a44f3c53f14b9283e120662abeb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096c30c53445b3fe1269b0a2a6ecd1dc') in 0.075859 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/music/Ozvuchka/Ded/Как звать тебя.m4a--online-audio-convert.com.mp3
-  artifactKey: Guid(77e0ace50e572e545839cd7b11ad4291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Как звать тебя.m4a--online-audio-convert.com.mp3 using Guid(77e0ace50e572e545839cd7b11ad4291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '559217ccbe1f068d9592decfe4810150') in 0.035405 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/music/Ozvuchka/Ded/Я служак людей.m4a--online-audio-convert.com.mp3
-  artifactKey: Guid(6f9593946b32dea44b4254f4f779590c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Я служак людей.m4a--online-audio-convert.com.mp3 using Guid(6f9593946b32dea44b4254f4f779590c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fffda774d5bccea1aef646bfc15001a5') in 0.055206 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/music/Ozvuchka/Ded/Хорошо жду.m4a--online-audio-convert.com.mp3
-  artifactKey: Guid(8aa5e9ce893188b49acd081d29e9a1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Хорошо жду.m4a--online-audio-convert.com.mp3 using Guid(8aa5e9ce893188b49acd081d29e9a1e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0749ba28bf802ac42867435fb776371') in 0.015703 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000083 seconds.
-  path: Assets/music/Ozvuchka/Ded/Не_умею_печь,_умею_молоть_m4a_online_audio_convert_com.mp3
-  artifactKey: Guid(9450fec84ec26a14ea5f895ac10611ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Не_умею_печь,_умею_молоть_m4a_online_audio_convert_com.mp3 using Guid(9450fec84ec26a14ea5f895ac10611ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f194b86085a6e5bae77fd0c596866cc5') in 0.029078 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/music/Ozvuchka/Ded/Хорошее_имя,_а_Я,_э_футбольный_мячик_m4a_online_audio_convert_com.mp3
-  artifactKey: Guid(fe1917c6592fb4f4298ede71221f9ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Хорошее_имя,_а_Я,_э_футбольный_мячик_m4a_online_audio_convert_com.mp3 using Guid(fe1917c6592fb4f4298ede71221f9ca0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7df20b928da165e51361f5f89f328c') in 0.021732 seconds 
-Number of asset objects unloaded after import = 2
-========================================================================
-Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/music/Ozvuchka/Ded/Сколько_тебе_лет_то_m4a_online_audio_convert_com.mp3
-  artifactKey: Guid(789fedd0a00cd064d963491399a1e417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Сколько_тебе_лет_то_m4a_online_audio_convert_com.mp3 using Guid(789fedd0a00cd064d963491399a1e417) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4b0a6bdb18a7eb6d4e2c74aeb136e49') in 0.038967 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/Sprits/yan/gun gun22.png using Guid(ea00b879b9c8fe049aeb81b7399e5c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57270578ddbe1aaa5c2551ce353f04fb') in 0.034515 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000026 seconds.
-  path: Assets/music/Ozvuchka/Ded/Внучок мельница.m4a--online-audio-convert.com.mp3
-  artifactKey: Guid(32a406770ebab044fbdf6bea1b67c0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/Sprits/yan/gun gun44.png
+  artifactKey: Guid(fbc0aab2f07e2f2438bd2c98e7af81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Внучок мельница.m4a--online-audio-convert.com.mp3 using Guid(32a406770ebab044fbdf6bea1b67c0c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd30db7d200cb404b58305ec155183a3') in 0.072242 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/Sprits/yan/gun gun44.png using Guid(fbc0aab2f07e2f2438bd2c98e7af81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9da1aac8f11d4a93c886f999ac2e910e') in 0.036295 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000034 seconds.
-  path: Assets/music/Ozvuchka/Ded/Слушай,_а_кем_ты_хочешь_стать_m4a_online_audio_convert_com.mp3
-  artifactKey: Guid(fe97e22995414794d8e15abe46fabaf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000024 seconds.
+  path: Assets/Sprits/yan/gun gun66.png
+  artifactKey: Guid(bd5f2b83ebf88a3489c0e1192fa5c0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Слушай,_а_кем_ты_хочешь_стать_m4a_online_audio_convert_com.mp3 using Guid(fe97e22995414794d8e15abe46fabaf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e035d4879d07e37a86aa1715b2ea843') in 0.020277 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/Sprits/yan/gun gun66.png using Guid(bd5f2b83ebf88a3489c0e1192fa5c0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47ee2328120d8e190e9b714867e7ae1d') in 0.041005 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 940.462103 seconds.
+  path: Assets/Sprits/yan/gun gun11.png
+  artifactKey: Guid(b4fca46d982ee5f4b9026c99dd294233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun11.png using Guid(b4fca46d982ee5f4b9026c99dd294233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18a74331dbf03767950a6682bc982a7') in 0.033814 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 52.785821 seconds.
+  path: Assets/Sprits/yan/gun gun22.png
+  artifactKey: Guid(ea00b879b9c8fe049aeb81b7399e5c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun22.png using Guid(ea00b879b9c8fe049aeb81b7399e5c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf1494cb36237a7f52396a9733f8ea4f') in 0.031555 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
   Time since last request: 0.000035 seconds.
-  path: Assets/music/Ozvuchka/Ded/Звуки-смерти-деда.mp3
-  artifactKey: Guid(998ec248cdcef6b459814528fc5bd7bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  path: Assets/Sprits/yan/gun gun33.png
+  artifactKey: Guid(64497e157c19fac4397e0bdf4340e2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/music/Ozvuchka/Ded/Звуки-смерти-деда.mp3 using Guid(998ec248cdcef6b459814528fc5bd7bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14f1e1d6e6cb30f4401dc9032e0c4fd6') in 0.058990 seconds 
-Number of asset objects unloaded after import = 2
+Start importing Assets/Sprits/yan/gun gun33.png using Guid(64497e157c19fac4397e0bdf4340e2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6884bf2592e622fc8fdf47f18a1a01') in 0.031648 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 10.067856 seconds.
-  path: Assets/Animation/1601629664rt.ttf
-  artifactKey: Guid(17ee2971dc3df1741b8f3c0b7d995a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprits/yan/gun gun55.png
+  artifactKey: Guid(8a5a6f2b621f83c47bf45d98863cf1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/Animation/1601629664rt.ttf using Guid(17ee2971dc3df1741b8f3c0b7d995a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46d65eceb973ce354ea1221b3299321c') in 0.658719 seconds 
-Number of asset objects unloaded after import = 4
+Start importing Assets/Sprits/yan/gun gun55.png using Guid(8a5a6f2b621f83c47bf45d98863cf1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '430505db84483de012878e12f37df8a4') in 0.033533 seconds 
+Number of asset objects unloaded after import = 3
 ========================================================================
 Received Import Request.
-  Time since last request: 152.496610 seconds.
-  path: Assets/Animation/passive1.controller
-  artifactKey: Guid(8b8f0478fa4ba0d488176b0cff4c150e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+  Time since last request: 0.000039 seconds.
+  path: Assets/Sprits/yan/gun gun44.png
+  artifactKey: Guid(fbc0aab2f07e2f2438bd2c98e7af81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Number of updated assets reloaded before import = 0
-Start importing Assets/Animation/passive1.controller using Guid(8b8f0478fa4ba0d488176b0cff4c150e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7007d74a9a94bbadfa07a096d47a0f55') in 0.065809 seconds 
-Number of asset objects unloaded after import = 22
+Start importing Assets/Sprits/yan/gun gun44.png using Guid(fbc0aab2f07e2f2438bd2c98e7af81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c0295c3454b30c765dd402979bd5b4') in 0.031860 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Sprits/yan/gun gun66.png
+  artifactKey: Guid(bd5f2b83ebf88a3489c0e1192fa5c0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun66.png using Guid(bd5f2b83ebf88a3489c0e1192fa5c0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d4ef4803ce20a45e84456d72bc19a4b') in 0.034268 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 47.842713 seconds.
+  path: Assets/Sprits/yan/gun gun11.png
+  artifactKey: Guid(b4fca46d982ee5f4b9026c99dd294233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun11.png using Guid(b4fca46d982ee5f4b9026c99dd294233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77a6cf2130108b6712b6fef077c944b5') in 0.027496 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 27.457147 seconds.
+  path: Assets/Sprits/yan/gun gun22.png
+  artifactKey: Guid(ea00b879b9c8fe049aeb81b7399e5c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun22.png using Guid(ea00b879b9c8fe049aeb81b7399e5c2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb32802a336103cf5486eae395d40f73') in 0.026623 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Sprits/yan/gun gun33.png
+  artifactKey: Guid(64497e157c19fac4397e0bdf4340e2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun33.png using Guid(64497e157c19fac4397e0bdf4340e2cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb22ef0744529c4b3ad349f567da72a') in 0.032581 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprits/yan/gun gun55.png
+  artifactKey: Guid(8a5a6f2b621f83c47bf45d98863cf1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun55.png using Guid(8a5a6f2b621f83c47bf45d98863cf1f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7a27eb1f45624b808bd67c1e7211814') in 0.031684 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Sprits/yan/gun gun44.png
+  artifactKey: Guid(fbc0aab2f07e2f2438bd2c98e7af81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun44.png using Guid(fbc0aab2f07e2f2438bd2c98e7af81ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8494b660726f1d7dbe333d9080a84ec8') in 0.033171 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Sprits/yan/gun gun66.png
+  artifactKey: Guid(bd5f2b83ebf88a3489c0e1192fa5c0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprits/yan/gun gun66.png using Guid(bd5f2b83ebf88a3489c0e1192fa5c0ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a802eecf476206b47e76000d51d96212') in 0.030367 seconds 
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.241 seconds
+Refreshing native plugins compatible for Editor in 49.76 ms, found 2 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  4.261 seconds
+Domain Reload Profiling:
+	ReloadAssembly (785ms)
+		BeginReloadAssembly (561ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (19ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (111ms)
+		LoadAllAssembliesAndSetupDomain (1456ms)
+			LoadAssemblies (442ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1377ms)
+				TypeCache.Initialize (619ms)
+					TypeCache.ScanAssembly (608ms)
+				ResolveRequiredComponents (29ms)
+		FinalizeReload (0ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (0ms)
+			SetupLoadedEditorAssemblies (1720ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (56ms)
+				SetLoadedEditorAssemblies (13ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (475ms)
+				ProcessInitializeOnLoadAttributes (741ms)
+				ProcessInitializeOnLoadMethodAttributes (424ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Refreshing native plugins compatible for Editor in 20.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2518 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (109.2 KB). Loaded Objects now: 3022.
+Memory consumption went from 404.6 MB to 404.5 MB.
+Total: 16.301700 ms (FindLiveObjects: 0.515900 ms CreateObjectMapping: 0.268900 ms MarkObjects: 15.362200 ms  DeleteObjects: 0.152800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
