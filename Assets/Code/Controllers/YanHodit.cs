@@ -10,6 +10,8 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	[SerializeField] private float speed;// открытая переменная скорость
 	[SerializeField] private GameObject Canvas;	
 	[SerializeField] private GameObject Okno;	
+	[SerializeField] private GameObject Otorva;
+	[SerializeField] private GameObject SpawnOtorva;
 	[SerializeField] private AudioSource SHOOT;
 	private bool facingRight = true; // лицо вправо = правда
 	private bool gun = true; // значение ружья
@@ -100,7 +102,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		gun = false;
 		reload = false; 
 		SHOOT.Stop();
-		yield return new WaitForSeconds(1f);
+		
 		
 	}
 
@@ -111,7 +113,9 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		gun = false;
 		anim.StopPlayback(); // всем анимациям "остановитясь"
 		anim.Play("relouding"); // сыграть анимацию перезарядки
-		yield return new WaitForSeconds(9.42f);
+		yield return new WaitForSeconds(1.45f);
+		Instantiate(Otorva,transform.position, Quaternion.identity);
+		yield return new WaitForSeconds(28.55f);
 		gun = true;	
 		shot = false;
 	}
