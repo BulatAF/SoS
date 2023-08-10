@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Playables;
+using UnityEngine.InputSystem;
 
 public class YanHodit : MonoBehaviour // объявление скрипта
 {
@@ -17,7 +18,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private bool gun = true; // значение ружья
 	private bool shot = true; // значение стрельбы
 	private bool strt = true;
-	public bool reload = false; // значение перезарядки
+	private bool reload = false; // значение перезарядки
 	private Rigidbody2D rb; //  рб = компонент риджет бади
 	private Vector2 moveVector; //б приватная переменная вектор 2д moveVector 
 	private bool isobject; // бул есть объект
@@ -26,9 +27,30 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	public LayerMask whatIsTable;// слой что есть стол, печь
 	public LayerMask whatIsHome;// слой что есть дом
 	private string nameAnim;
-	
+	private InputController controls;
 	public static int Gun;	
 	
+	void Awake()
+	{
+		controls = new InputController();
+		controls.Move.Gun.performed += ctx => GunContr();
+		controls.Move.Reload.performed += ctx => Reloading();
+		controls.BlFight.ATCL.performed += ctx => AttackCl();
+		controls.BlFight.ATUP.performed += ctx => AttackUp();
+		controls.BlFight.BLCL.performed += ctx => BlockCl();
+		controls.BlFight.BLUP.performed += ctx => BlockUp();
+	}
+	
+	void OnEnable()
+	{
+		controls.Move.Enable();
+		controls.BlFight.Enable();
+	}
+	void OnDisable()
+	{
+		controls.Move.Disable();
+		controls.BlFight.Disable();
+	}
      void Start()// начало программы
     {
 		name = "atackst";
@@ -40,14 +62,14 @@ public class YanHodit : MonoBehaviour // объявление скрипта
     }
 	private void FixedUpdate()// постоянный покадровый цикл
 	{
-		moveVector.x = Input.GetAxis("Horizontal");// движение по горизонтали на клавиатуре = движ по x
+		moveVector.x = controls.Move.Move.ReadValue<float>();// движение по горизонтали на клавиатуре = движ по x
 		if(Monolog.whatDialog2 == 3 && strt == true)// начальный выбор
 		{
 			Canvas.SetActive(true);
 		}
 		if(isobject == false)
 		{
-			moveVector.y = Input.GetAxis("Vertical");
+			moveVector.y = controls.Move.MoveY.ReadValue<float>();
 		}
 		else{moveVector.y = 0f;}
 		if(facingRight == false && moveVector.x > 0 && shot == false)//развороты
@@ -114,7 +136,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		anim.StopPlayback(); // всем анимациям "остановитясь"
 		anim.Play("relouding"); // сыграть анимацию перезарядки
 		yield return new WaitForSeconds(1.45f);
-		Instantiate(Otorva,transform.position, Quaternion.identity);
+		Instantiate(Otorva,SpawnOtorva.transform.position, Quaternion.identity);
 		yield return new WaitForSeconds(28.55f);
 		gun = true;	
 		shot = false;
@@ -169,34 +191,30 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	}
 	
 	
-	
-	
-	void Update()
-    {
-		
-		isobject = Physics2D.OverlapCircle(CheckPos.position,CheckRadius,whatIsTable);
-		if(moveVector.x == 0f && moveVector.y == 0f && gun == true && Input.GetKeyUp(KeyCode.F) && shot == false && reload == true) // стрельба
+	void GunContr()
+	{
+		if(moveVector.x == 0f && moveVector.y == 0f && gun == true&& shot == false && reload == true) // стрельба
 			{
 				if(facingRight == true)
 				{Gun = 1;}
 				else{Gun =2;}
 				StartCoroutine(Shoot());
 			}
-		if(gun == false && Input.GetKeyUp(KeyCode.F) && shot == false) // достать оружие
+		if(gun == false && shot == false) // достать оружие
 			{
 				gun = true; // доступ к пушке
 			}	
-		if(moveVector.x == 0f && moveVector.y == 0f && Input.GetKeyUp(KeyCode.R) && shot == false && reload == false) // перезарядка
+	}
+	void Reloading()
+	{
+		if(moveVector.x == 0f && moveVector.y == 0f && shot == false && reload == false) // перезарядка
 			{
 				StartCoroutine(Reload());
 			}
-		
-		
-		
-		
-		
-		
-		if(Input.GetKeyUp(KeyCode.G) && shot == false) //
+	}
+	void AttackCl()
+	{
+		if(shot == false)
 		{
 			if(gun == false)
 			{
@@ -204,7 +222,10 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 				StartCoroutine(Atackst());
 			}else{gun = false;}
 		}
-		if(gun == false && Input.GetKeyUp(KeyCode.H) && shot == false) //
+	}
+	void AttackUp()
+	{
+		if(shot == false)
 		{
 			if(gun == false)
 			{
@@ -212,16 +233,28 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 				StartCoroutine(Atackst());
 			}else{gun = false;}
 		}
-		if(gun == false && Input.GetKeyUp(KeyCode.J) && shot == false)  //
+	}
+	void BlockCl()
+	{
+		if(gun == false && shot == false)  //
 		{
 			nameAnim = "blockclas";
 			StartCoroutine(Blockst());
 		}
-		if(gun == false && Input.GetKeyUp(KeyCode.K) && shot == false) // 
+	}
+	void BlockUp()
+	{
+		if(gun == false && shot == false) // 
 		{
 			nameAnim = "blockup";
 			StartCoroutine(Blockst());
 		}
+	}
+	
+	void Update()
+    {
+		
+		isobject = Physics2D.OverlapCircle(CheckPos.position,CheckRadius,whatIsTable);
 		if(target.TfalsE >= 3)// застрял)
 		{
 			rb.velocity = new Vector2(0f,0f);

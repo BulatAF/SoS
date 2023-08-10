@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Monolog : MonoBehaviour
 {
@@ -45,30 +46,105 @@ public class Monolog : MonoBehaviour
 	"Ах, и да, пожалуйста, уважаемое членистоногое, оставьте хотя бы добрый и справедливый отзыв об игре."};
 	[SerializeField] private GameObject neprohod;
 	public static int replWhat2;
+	public int RRR;
 	[SerializeField] Text text2;
 	private bool one;
 	public static int whatDialog2 = 1;
+	public int WWW;
+	private InputController controls; 
+	void Awake()
+	{
+		controls = new InputController();
+		controls.Move.Gun.performed += ctx => PressF();
+		controls.Move.Monolog.performed += ctx => PressE();
+		controls.BlFight.ATCL.performed += ctx => PressGH();
+		controls.BlFight.ATUP.performed += ctx => PressGH();
+		controls.BlFight.BLCL.performed += ctx => PressJK();
+		controls.BlFight.BLUP.performed += ctx => PressJK();
+	}
+	
+	void OnEnable()
+	{
+		controls.Move.Enable();
+		controls.BlFight.Enable();
+	}
+	void OnDisable()
+	{
+		controls.Move.Disable();
+		controls.BlFight.Enable();
+	}
 	void Start()
     {
         replWhat2 = 0;
 		neprohod.SetActive(false);
     }
-
-    
-    void Update()
-    {
-		
-        if(whatDialog2 == 1)
+	void PressF()
+	{
+		if(replWhat2 == 1 && whatDialog2 == 4 && target.TtruE == 2) ///
 		{
-			text2.text = DStart[replWhat2];
-			if(Input.GetKeyDown(KeyCode.E))
+			replWhat2 += 1;
+		}
+	}
+	void PressE()
+	{
+		if(whatDialog2 == 1)
 			{
 				replWhat2 += 1;
 			}
-			if(replWhat2 == 8)
+		if(replWhat2 == 8 && whatDialog2 == 1)
+			{
+				whatDialog2 = 3;
+				replWhat2 = 0;
+			}
+		if(replWhat2 != 3 && replWhat2 != 6 && target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1))
+			{
+				replWhat2 += 1;
+			}
+		if(replWhat2 == 9 && target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1))
 			{
 				replWhat2 = 0;
+				whatDialog2 = 4;
+			}
+		if(replWhat2 != 1 && whatDialog2 == 4 && target.TtruE == 2)
+			{
+				replWhat2 += 1;
+			}
+		if(replWhat2 == 4 && whatDialog2 == 4 && target.TtruE == 2)
+			{
+				replWhat2 = 0;
+				whatDialog2 = 5;
+			}
+		if(whatDialog2 == 5 && target.TtruE == 3)
+			{
+				replWhat2 += 1;
+			}
+	}
+	void PressGH()
+	{
+		if(replWhat2 == 3 && target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1))
+			{
+				replWhat2 += 1;
+			}
+	}
+	void PressJK()
+	{
+		if(replWhat2 == 6 && target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1)) 
+			{
+				replWhat2 += 1;
+			}
+	}
+    
+    void Update()
+    {
+		RRR = replWhat2;
+		WWW = whatDialog2;
+        if(whatDialog2 == 1)
+		{
+			text2.text = DStart[replWhat2];
+			if(replWhat2 > 7)
+			{
 				whatDialog2 = 3;
+				replWhat2 = 0;
 			}
 		}
 		if(whatDialog2 == -1)// диалог влево
@@ -85,48 +161,14 @@ public class Monolog : MonoBehaviour
 		{
 			whatDialog2 =3;
 			text2.text = DTrueBA[replWhat2];
-			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 3 && replWhat2 != 6)
-			{
-				replWhat2 += 1;
-			}
-			if(replWhat2 == 9)
-			{
-				replWhat2 = 0;
-				whatDialog2 = 4;
-			}
-			if(replWhat2 == 3 && (Input.GetKeyDown(KeyCode.H) || (Input.GetKeyDown(KeyCode.G)))) 
-			{
-				replWhat2 += 1;
-			}
-			if(replWhat2 == 6 && (Input.GetKeyDown(KeyCode.J) || (Input.GetKeyDown(KeyCode.K)))) 
-			{
-				replWhat2 += 1;
-			}
 		}
 		if(whatDialog2 == 4 && target.TtruE == 2) // диалог вправо дальний бой
 		{
 			text2.text = DTrueDA[replWhat2];
-			if(Input.GetKeyDown(KeyCode.E) && replWhat2 != 1)
-			{
-				replWhat2 += 1;
-			}
-			if(replWhat2 == 4)
-			{
-				replWhat2 = 0;
-				whatDialog2 = 5;
-			}
-			if(replWhat2 == 1 && Input.GetKeyDown(KeyCode.F)) 
-			{
-				replWhat2 += 1;
-			}
 		}
 		if(whatDialog2 == 5 && target.TtruE == 3) // диалог вправо итог
 		{
 			text2.text = DTrueEnd[replWhat2];
-			if(Input.GetKeyDown(KeyCode.E))
-			{
-				replWhat2 += 1;
-			}
 			if(replWhat2 == 4)
 			{
 				replWhat2 =10;
