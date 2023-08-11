@@ -14,6 +14,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	[SerializeField] private GameObject Otorva;
 	[SerializeField] private GameObject SpawnOtorva;
 	[SerializeField] private AudioSource SHOOT;
+	[SerializeField] private Joystick joy;
 	private bool facingRight = true; // лицо вправо = правда
 	private bool gun = true; // значение ружья
 	private bool shot = true; // значение стрельбы
@@ -63,6 +64,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	private void FixedUpdate()// постоянный покадровый цикл
 	{
 		moveVector.x = controls.Move.Move.ReadValue<float>();// движение по горизонтали на клавиатуре = движ по x
+		moveVector.x = joy.Horizontal;
 		if(Monolog.whatDialog2 == 3 && strt == true)// начальный выбор
 		{
 			Canvas.SetActive(true);
@@ -70,6 +72,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 		if(isobject == false)
 		{
 			moveVector.y = controls.Move.MoveY.ReadValue<float>();
+			moveVector.y = joy.Vertical;
 		}
 		else{moveVector.y = 0f;}
 		if(facingRight == false && moveVector.x > 0 && shot == false)//развороты
@@ -191,7 +194,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 	}
 	
 	
-	void GunContr()
+	public void GunContr()
 	{
 		if(moveVector.x == 0f && moveVector.y == 0f && gun == true&& shot == false && reload == true) // стрельба
 			{
@@ -205,14 +208,14 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 				gun = true; // доступ к пушке
 			}	
 	}
-	void Reloading()
+	public void Reloading()
 	{
 		if(moveVector.x == 0f && moveVector.y == 0f && shot == false && reload == false) // перезарядка
 			{
 				StartCoroutine(Reload());
 			}
 	}
-	void AttackCl()
+	public void AttackCl()
 	{
 		if(shot == false)
 		{
@@ -223,7 +226,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			}else{gun = false;}
 		}
 	}
-	void AttackUp()
+	public void AttackUp()
 	{
 		if(shot == false)
 		{
@@ -234,7 +237,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			}else{gun = false;}
 		}
 	}
-	void BlockCl()
+	public void BlockCl()
 	{
 		if(gun == false && shot == false)  //
 		{
@@ -242,7 +245,7 @@ public class YanHodit : MonoBehaviour // объявление скрипта
 			StartCoroutine(Blockst());
 		}
 	}
-	void BlockUp()
+	public void BlockUp()
 	{
 		if(gun == false && shot == false) // 
 		{

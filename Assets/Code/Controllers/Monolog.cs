@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Monolog : MonoBehaviour
 {
-	string[] DStart =  new[]{"Приветствую тебя, Туша.(Нажми на E англ)",
+	string[] DStart =  new[]{"Приветствую тебя, Туша.(Нажми на окно диалога)",
 	"Чтобы не возникало лишних вопросов скажу сразу - это обучение.... ",
 	" Возможно... ",
 	"Для того, чтобы пройти это возможно-невозможное типа обучение повернись вправо и передвигай ногами вперёд - это называется ходьба.",
@@ -78,14 +78,14 @@ public class Monolog : MonoBehaviour
         replWhat2 = 0;
 		neprohod.SetActive(false);
     }
-	void PressF()
+	public void PressF()
 	{
 		if(replWhat2 == 1 && whatDialog2 == 4 && target.TtruE == 2) ///
 		{
 			replWhat2 += 1;
 		}
 	}
-	void PressE()
+	public void PressE()
 	{
 		if(whatDialog2 == 1)
 			{
@@ -119,14 +119,14 @@ public class Monolog : MonoBehaviour
 				replWhat2 += 1;
 			}
 	}
-	void PressGH()
+	public void PressGH()
 	{
 		if(replWhat2 == 3 && target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1))
 			{
 				replWhat2 += 1;
 			}
 	}
-	void PressJK()
+	public void PressJK()
 	{
 		if(replWhat2 == 6 && target.TtruE == 1 && (whatDialog2 == 3 || whatDialog2 == -1)) 
 			{
